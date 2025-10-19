@@ -1,0 +1,163 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ApiConsumerProduct</name>
+    </assembly>
+    <members>
+        <member name="M:ApiConsumerProduct.Controllers.v1.ConsumerProductsController.AddConsumerProduct(ApiConsumerProduct.Domain.ConsumerProducts.Dtos.ConsumerProductForCreationDto)">
+            <summary>
+            Creates a new ConsumerProduct record.
+            </summary>
+        </member>
+        <member name="M:ApiConsumerProduct.Controllers.v1.ConsumerProductsController.GetConsumerProduct(System.Guid)">
+            <summary>
+            Gets a single ConsumerProduct by ID.
+            </summary>
+        </member>
+        <member name="M:ApiConsumerProduct.Controllers.v1.ConsumerProductsController.GetConsumerProducts(ApiConsumerProduct.Domain.ConsumerProducts.Dtos.ConsumerProductParametersDto)">
+            <summary>
+            Gets a list of all ConsumerProducts.
+            </summary>
+        </member>
+        <member name="M:ApiConsumerProduct.Controllers.v1.ConsumerProductsController.DeleteConsumerProduct(System.Guid)">
+            <summary>
+            Deletes an existing ConsumerProduct record.
+            </summary>
+        </member>
+        <member name="M:ApiConsumerProduct.Controllers.v1.ConsumerProductsController.UpdateConsumerProduct(System.Guid,ApiConsumerProduct.Domain.ConsumerProducts.Dtos.ConsumerProductForUpdateDto)">
+            <summary>
+            Updates an entire existing ConsumerProduct.
+            </summary>
+        </member>
+        <member name="M:ApiConsumerProduct.Controllers.v1.PermissionsController.GetPermissions">
+            <summary>
+            Gets a list of all available permissions.
+            </summary>
+        </member>
+        <member name="M:ApiConsumerProduct.Controllers.v1.PermissionsController.GetAssignedPermissions">
+            <summary>
+            Gets a list of the current user's assigned permissions.
+            </summary>
+        </member>
+        <member name="M:ApiConsumerProduct.Controllers.v1.RolePermissionsController.GetRolePermissions(ApiConsumerProduct.Domain.RolePermissions.Dtos.RolePermissionParametersDto)">
+            <summary>
+            Gets a list of all RolePermissions.
+            </summary>
+        </member>
+        <member name="M:ApiConsumerProduct.Controllers.v1.RolePermissionsController.GetRolePermission(System.Guid)">
+            <summary>
+            Gets a single RolePermission by ID.
+            </summary>
+        </member>
+        <member name="M:ApiConsumerProduct.Controllers.v1.RolePermissionsController.AddRolePermission(ApiConsumerProduct.Domain.RolePermissions.Dtos.RolePermissionForCreationDto)">
+            <summary>
+            Creates a new RolePermission record.
+            </summary>
+        </member>
+        <member name="M:ApiConsumerProduct.Controllers.v1.RolePermissionsController.UpdateRolePermission(System.Guid,ApiConsumerProduct.Domain.RolePermissions.Dtos.RolePermissionForUpdateDto)">
+            <summary>
+            Updates an entire existing RolePermission.
+            </summary>
+        </member>
+        <member name="M:ApiConsumerProduct.Controllers.v1.RolePermissionsController.DeleteRolePermission(System.Guid)">
+            <summary>
+            Deletes an existing RolePermission record.
+            </summary>
+        </member>
+        <member name="M:ApiConsumerProduct.Controllers.v1.RolesController.GetRoles">
+            <summary>
+            Gets a list of all available roles.
+            </summary>
+        </member>
+        <member name="M:ApiConsumerProduct.Controllers.v1.UsersController.AddRole(System.Guid,System.String)">
+            <summary>
+            Adds a new role to a user.
+            </summary>
+        </member>
+        <member name="M:ApiConsumerProduct.Controllers.v1.UsersController.RemoveRole(System.Guid,System.String)">
+            <summary>
+            Removes a role from a User
+            </summary>
+        </member>
+        <member name="M:ApiConsumerProduct.Controllers.v1.UsersController.GetUsers(ApiConsumerProduct.Domain.Users.Dtos.UserParametersDto)">
+            <summary>
+            Gets a list of all Users.
+            </summary>
+        </member>
+        <member name="M:ApiConsumerProduct.Controllers.v1.UsersController.GetUser(System.Guid)">
+            <summary>
+            Gets a single User by ID.
+            </summary>
+        </member>
+        <member name="M:ApiConsumerProduct.Controllers.v1.UsersController.AddUser(ApiConsumerProduct.Domain.Users.Dtos.UserForCreationDto)">
+            <summary>
+            Creates a new User record.
+            </summary>
+        </member>
+        <member name="M:ApiConsumerProduct.Controllers.v1.UsersController.UpdateUser(System.Guid,ApiConsumerProduct.Domain.Users.Dtos.UserForUpdateDto)">
+            <summary>
+            Updates an entire existing User.
+            </summary>
+        </member>
+        <member name="M:ApiConsumerProduct.Controllers.v1.UsersController.DeleteUser(System.Guid)">
+            <summary>
+            Deletes an existing User record.
+            </summary>
+        </member>
+        <member name="M:ApiConsumerProduct.Databases.EntityConfigurations.ConsumerProductConfiguration.Configure(Microsoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder{ApiConsumerProduct.Domain.ConsumerProducts.ConsumerProduct})">
+            <summary>
+            The database configuration for ConsumerProducts. 
+            </summary>
+        </member>
+        <member name="M:ApiConsumerProduct.Databases.EntityConfigurations.RolePermissionConfiguration.Configure(Microsoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder{ApiConsumerProduct.Domain.RolePermissions.RolePermission})">
+            <summary>
+            The database configuration for RolePermissions. 
+            </summary>
+        </member>
+        <member name="M:ApiConsumerProduct.Databases.EntityConfigurations.UserConfiguration.Configure(Microsoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder{ApiConsumerProduct.Domain.Users.User})">
+            <summary>
+            The database configuration for Users. 
+            </summary>
+        </member>
+        <member name="M:ApiConsumerProduct.Databases.EntityConfigurations.UserRoleConfiguration.Configure(Microsoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder{ApiConsumerProduct.Domain.Users.UserRole})">
+            <summary>
+            The database configuration for UserRoles. 
+            </summary>
+        </member>
+        <member name="P:ApiConsumerProduct.Domain.Addresses.Address.Line1">
+            <summary>
+            Address line 1 (e.g., street, PO Box, or company name).
+            </summary>
+        </member>
+        <member name="P:ApiConsumerProduct.Domain.Addresses.Address.Line2">
+            <summary>
+            Address line 2 (e.g., apartment, suite, unit, or building).
+            </summary>
+        </member>
+        <member name="P:ApiConsumerProduct.Domain.Addresses.Address.City">
+            <summary>
+            City, district, suburb, town, or village.
+            </summary>
+        </member>
+        <member name="P:ApiConsumerProduct.Domain.Addresses.Address.State">
+            <summary>
+            State, county, province, or region.
+            </summary>
+        </member>
+        <member name="P:ApiConsumerProduct.Domain.Addresses.Address.PostalCode">
+            <summary>
+            ZIP or postal code.
+            </summary>
+        </member>
+        <member name="P:ApiConsumerProduct.Domain.Addresses.Address.Country">
+            <summary>
+            Two-letter country code <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">(ISO 3166-1 alpha-2)</a>.
+            </summary>
+        </member>
+        <member name="M:ApiConsumerProduct.Extensions.Services.WebAppServiceConfiguration.AddBoundaryServices(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Reflection.Assembly[])">
+            <summary>
+            Registers all services in the assembly of the given interface.
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,44 @@
+version: '3.7'
+
+services:
+  dockerconfig-db:
+    image: postgres
+    restart: always
+    ports:
+      - '57122:5432'
+    environment:
+      POSTGRES_USER: SA
+      POSTGRES_PASSWORD: #localDockerPassword#
+      POSTGRES_DB: dev_dockerconfig
+    volumes:
+      - dockerconfig-data:/var/lib/postgresql/data
+
+  rmq-message-broker:
+    image: masstransit/rabbitmq
+    restart: always
+    ports:
+      - '57121:15672' # RabbitMQ Management UI
+      - '57120:5672' # RabbitMQ Broker
+    environment:
+      RABBITMQ_DEFAULT_USER: guest
+      RABBITMQ_DEFAULT_PASS: guest
+
+
+  jaeger:
+    image: jaegertracing/all-in-one:latest
+#    port mappings: https://www.jaegertracing.io/docs/1.32/getting-started/
+    ports:
+      - "58092:5775/udp"
+      - "58091:6831/udp"
+      - "58093:6832/udp"
+      - "58094:5778"
+      - "58095:16686"
+      - "58096:14250"
+      - "58097:14268"
+      - "58098:14269"
+      - "58099:9411"
+
+        
+volumes:
+  # compose volumes marker - do not delete
+  dockerconfig-data:
