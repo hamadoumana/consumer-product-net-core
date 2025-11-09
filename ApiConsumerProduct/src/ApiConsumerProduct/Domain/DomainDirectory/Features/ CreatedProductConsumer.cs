@@ -12,6 +12,8 @@ public sealed class  CreatedProductConsumer() : IConsumer<ICreatedProductMessage
 		var product = context.Message;
 		
 		Console.WriteLine($"Received CreatedProductMessage: ProductId={product.ProductId}, Price={product.Price}, Description={product.Description}, Quantity={product.Quantity}");
+		//add comment
+
 
 		return Task.CompletedTask;
     }
