@@ -4,10 +4,17 @@
       "commandName": "Project",
       "launchBrowser": true,
       "launchUrl": "swagger",
-      "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
-      },
-      "applicationUrl": "https://localhost:5000"
+        "environmentVariables": {
+            "ASPNETCORE_ENVIRONMENT": "Development",
+            "ConnectionString": "Host=localhost;Port=5432;Database=db-consumer-product;Username=postgres;Password=admin",
+            "RMQ_VIRTUAL_HOST": "/",
+            "RMQ_HOST": "localhost",
+            "RMQ_PASSWORD": "admin",
+            "RMQ_PORT": "5672",
+            "RMQ_USERNAME": "admin",
+            "RMQ_QUEUE_NAME": "created-generation-product-queue"
+        },
+      "applicationUrl": "https://localhost:5001"
     }
   }
 }

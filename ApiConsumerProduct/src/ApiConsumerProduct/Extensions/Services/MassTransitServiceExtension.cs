@@ -26,19 +26,19 @@ public static class MassTransitServiceExtension
                 mt.AddConsumers(Assembly.GetExecutingAssembly());
                 mt.UsingRabbitMq((context, cfg) =>
                 {
-                    cfg.Host(rmqOptions.Host, 
-                        ushort.Parse(rmqOptions.Port), 
-                        rmqOptions.VirtualHost, 
-                        h =>
-                        {
-                            h.Username(rmqOptions.Username);
-                            h.Password(rmqOptions.Password);
-                        });
+					cfg.Host(Environment.GetEnvironmentVariable("RMQ_HOST"),
+					   ushort.Parse(Environment.GetEnvironmentVariable("RMQ_PORT")),
+					   Environment.GetEnvironmentVariable("RMQ_VIRTUAL_HOST"),
+					   h =>
+					   {
+						   h.Username(Environment.GetEnvironmentVariable("RMQ_USERNAME"));
+						   h.Password(Environment.GetEnvironmentVariable("RMQ_PASSWORD"));
+					   });
 
-                    // Producers -- Do Not Delete This Comment
+					// Producers -- Do Not Delete This Comment
 
-                    // Consumers -- Do Not Delete This Comment
-                    cfg.CreatedProductCusumerEndpointRegistration(context);
+					// Consumers -- Do Not Delete This Comment
+					cfg.CreatedProductCusumerEndpointRegistration(context);
                 });
             });
             services.AddOptions<MassTransitHostOptions>();

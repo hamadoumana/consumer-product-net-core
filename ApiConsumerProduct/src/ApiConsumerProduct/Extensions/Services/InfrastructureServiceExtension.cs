@@ -21,8 +21,8 @@ public static class ServiceRegistration
         {
             // this makes local migrations easier to manage. feel free to refactor if desired.
             connectionString = env.IsDevelopment() 
-                ? "Host=localhost;Port=57122;Database=dev_dockerconfig;Username=SA;Password=#localDockerPassword#"
-                : throw new Exception("The database connection string is not set.");
+                ? "Host=localhost;Port=5432;Database=db-consumer-product;Username=postgres;Password=admin"
+				: throw new Exception("The database connection string is not set.");
         }
 
         services.AddDbContext<ConsumerProductDbContext>(options =>

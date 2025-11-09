@@ -159,5 +159,17 @@
             Registers all services in the assembly of the given interface.
             </summary>
         </member>
+        <member name="T:ApiConsumerProduct.Migrations.initialMigration">
+            <inheritdoc />
+        </member>
+        <member name="M:ApiConsumerProduct.Migrations.initialMigration.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:ApiConsumerProduct.Migrations.initialMigration.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:ApiConsumerProduct.Migrations.initialMigration.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
     </members>
 </doc>
